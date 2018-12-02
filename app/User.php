@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\EventSeat;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -27,4 +28,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function eventSeats()
+    {
+        return $this->hasMany(EventSeat::class);
+    }
 }
