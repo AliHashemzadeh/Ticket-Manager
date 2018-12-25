@@ -9,7 +9,7 @@ class Seat extends Model
 
     public function sections()
     {
-        return $this->belongsToMany(Seat::class, 'seat_section');
+        return $this->belongsToMany(Section::class, 'seat_section');
     }
 
     public function events()

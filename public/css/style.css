@@ -1,0 +1,40 @@
+.section {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100px;
+    height: 20px;
+    margin: 5px auto;
+}
+
+.seatActive, .seatBuy, .seatReserve, .seat, .seatSelect {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 2px;
+    margin: 4px;
+}
+.seats-help div{
+    float: right;
+}
+.seatActive {
+    background: #579b6c;
+    color: white;
+}
+
+.seatBuy {
+    background: #CA3B3B;
+}
+
+.seatReserve {
+    background: #e5bf10;
+}
+
+.seat {
+    background: #d0d0d0;
+}
+
+.seatSelect {
+    background: dodgerblue;
+}
+
