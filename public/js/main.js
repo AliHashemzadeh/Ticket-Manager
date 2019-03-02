@@ -22,7 +22,27 @@ $(document).ready(function () {
         });
     });
 
+    $('.seatActive').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('seatSelect');
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+           type: 'POST',
+           url: '/admin/seat/selected',
+           data: {
+               seat_id: $(this).attr('id')
+           },
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+            }
+        });
 
+    })
 
     
 });

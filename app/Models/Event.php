@@ -6,6 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+
+    protected $fillable = [
+        'name', 'description', 'start', 'end', 'image', 'status'
+    ];
+
+    public $timestamps = false;
+
     public function halls()
     {
         return $this->hasMany(Hall::class);

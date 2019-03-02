@@ -20,14 +20,17 @@
 .seatActive {
     background: #579b6c;
     color: white;
+    cursor: pointer;
 }
 
 .seatBuy {
     background: #CA3B3B;
+    cursor: not-allowed;
 }
 
 .seatReserve {
     background: #e5bf10;
+    cursor: not-allowed;
 }
 
 .seat {
@@ -36,5 +39,6 @@
 
 .seatSelect {
     background: dodgerblue;
+    cursor: pointer;
 }
 

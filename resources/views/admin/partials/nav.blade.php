@@ -6,18 +6,18 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="{{ route('admin.panel') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    لیست کاربران
-                </a>
+                <span class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ \Illuminate\Support\Facades\Auth::user()->name }}
+                </span>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('admin.panel') }}">لیست کاربران</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">اضافه کردن رویداد</a>
+                    <a class="dropdown-item" href="{{ route('admin.event') }}">اضافه کردن رویداد</a>
                     <a class="dropdown-item" href="{{ route('admin.hall') }}">اضافه کردن سالن</a>
                     <a class="dropdown-item" href="{{ route('admin.section') }}">اضافه کردن بخش</a>
                     <a class="dropdown-item" href="{{ route('admin.seat') }}">اضافه کردن صندلی</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}">خروج</a>
                 </div>
             </li>
 

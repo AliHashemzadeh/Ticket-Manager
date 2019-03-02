@@ -14,6 +14,16 @@
         </div>
 
         <div class="form-group">
+            <label for=""></label>
+            <select class="custom-select" name="event_id">
+                <option value="" selected>انتخاب رویداد</option>
+                @foreach($events as $event)
+                    <option value="{{ $event->id }}">{{ $event->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="form-group">
             <button type="submit" class="btn btn-success px-4">ثبت</button>
         </div>
 

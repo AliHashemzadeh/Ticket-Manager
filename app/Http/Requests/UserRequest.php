@@ -23,15 +23,25 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+
+
+        $rules = [
+            'name' => 'required',
             'email' => 'required|email',
             'password' => 'required|min:6'
         ];
+
+        if (!request()->has('name')){
+            unset($rules['name']);
+        }
+
+        return $rules;
     }
 
     public function messages()
     {
         return [
+            'name.required' => 'وارد کردن اسم الزامی میباشد.',
             'email.required' => 'وارد کردن ایمیل الزامی میباشد.',
             'email.email' => 'لطفا ایمیل معتبر وارد کنید.',
             'password.required' => 'وارد کردن کلمه عبور الزامی میباشد.',

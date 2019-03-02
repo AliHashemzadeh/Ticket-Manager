@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ادمین</title>
+    <title>فروش بلیت</title>
 
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" crossorigin="anonymous">
 
@@ -14,24 +14,19 @@
 
 </head>
 <body dir="rtl">
-@include('admin.partials.nav')
+@include('home.partials.nav')
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-12">
-            <div class="card mt-5">
-                <div class="card-header">
-                    {{ isset($card_title) ? $card_title : '' }}
-                </div>
-                <div class="card-body">
-                    @yield('content')
-                </div>
-            </div>
 
-        </div>
+@yield('content')
+
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; My Website 2018</p>
     </div>
-</div>
-
+    <!-- /.container -->
+</footer>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

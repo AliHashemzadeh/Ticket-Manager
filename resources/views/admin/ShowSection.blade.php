@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('header')
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @endsection
 
@@ -40,7 +41,7 @@
                 @foreach($seats as $seat)
 
                     @if($seat->row_number == $i)
-                        <div id="seat{{ $seat->id }}" class="seatActive text-center">{{ $seat->seat_number }}</div>
+                        <div id="{{ $seat->id }}" class="seatActive text-center">{{ $seat->seat_number }}</div>
                     @endif
                 @endforeach
             </div>
